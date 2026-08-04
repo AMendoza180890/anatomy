@@ -533,6 +533,10 @@ export class AnatomyViewer {
     this.dirty = true;
   }
 
+  setAriaLabel(label: string) {
+    this.renderer.domElement.setAttribute("aria-label", label);
+  }
+
   reset() {
     this.select(null);
     this.tween(this.camera.position, { ...HOME_CAMERA, duration: 0.8, ease: "power3.out" });
